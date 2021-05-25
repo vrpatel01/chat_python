@@ -321,7 +321,7 @@ class SERVER():
 
 
 if __name__ == '__main__':
-    addrs = ('127.0.0.1', 45000)
+    addrs = ('127.0.0.1', 45000) # your public ip
     server1 = SERVER(addrs)
     server1.start()
     server1.save_clients()
