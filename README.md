@@ -1,2 +1,7 @@
-# chat_python
-python chat server and client with socket
+# PYTHON CHAT 
+## SOCKET 
+
+run server with your ip and port
+run client and connect to server
+
+
