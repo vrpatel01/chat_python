@@ -18,7 +18,8 @@ class CLIENT():
     def __init__(self):
         print('WELCOME')
         # (input('Enter SERVER IP: '),input('Enrer SERVER port: '))
-        self.S_addr = ("127.0.0.1", 45000)
+#         self.S_addr = ("127.0.0.1", 45000)
+        self.S_addr = (input('Enter SERVER IP: '),input('Enrer SERVER port: '))
         self.HName = socket.gethostname()
         self.ip = socket.gethostbyname(self.HName)
         self.Groupes = {}
@@ -122,7 +123,7 @@ class CLIENT():
         print('[username] (not shared with anyone alphanumeric)')
         self.uname = input('>')
         print('[password] (alphanumeric with symbols)')
-        self.passwd = input('>')
+        self.passwd = getpass('>')
         print('[Nick Name] what people will see you as alphanumeric ')
         self.nickName = input('>')
         self.snid = "SNID"
