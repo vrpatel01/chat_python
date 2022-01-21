@@ -4,27 +4,21 @@ import pickle
 from getpass import getpass
 from datetime import datetime
 
-class PACKET:
-    def __init__(self,TYPE,sender,recever='SERVER',data=None):
-        self.time = datetime.now()
-        self.TYPE = TYPE
-        self.sender = sender
-        self.recever = recever
-        self.data = data
+from . import PACKET
 
 
 class CLIENT():
 
     def __init__(self):
         print('WELCOME')
-        # (input('Enter SERVER IP: '),input('Enrer SERVER port: '))
-#         self.S_addr = ("127.0.0.1", 45000)
+        #self.S_addr = ("127.0.0.1", 45000)
         self.S_addr = (input('Enter SERVER IP: '),input('Enrer SERVER port: '))
         self.HName = socket.gethostname()
         self.ip = socket.gethostbyname(self.HName)
         self.Groupes = {}
         self.mes_history = []
         self.new_mes = []
+
 
         self.c_rec = self.connect_server()
         if not self.load_reg():

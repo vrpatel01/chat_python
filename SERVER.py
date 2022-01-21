@@ -3,14 +3,9 @@ import threading
 import pickle
 from datetime import datetime
 
+from . import PACKET
 
-class PACKET:
-    def __init__(self, TYPE, sender='SERVER', recever='ME', data=None):
-        self.time = datetime.now()
-        self.TYPE = TYPE
-        self.sender = sender
-        self.recever = recever
-        self.data = data
+
 
 
 class Client_():
