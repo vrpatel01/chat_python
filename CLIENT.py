@@ -3,8 +3,8 @@ import threading
 import pickle
 from getpass import getpass
 from datetime import datetime
+from PACKET import PACKET
 
-from . import PACKET
 
 
 class CLIENT():
@@ -12,7 +12,7 @@ class CLIENT():
     def __init__(self):
         print('WELCOME')
         #self.S_addr = ("127.0.0.1", 45000)
-        self.S_addr = (input('Enter SERVER IP: '),input('Enrer SERVER port: '))
+        self.S_addr = (input('Enter SERVER IP: '),int(input('Enrer SERVER port: ')))
         self.HName = socket.gethostname()
         self.ip = socket.gethostbyname(self.HName)
         self.Groupes = {}

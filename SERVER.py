@@ -2,8 +2,7 @@ import socket
 import threading
 import pickle
 from datetime import datetime
-
-from . import PACKET
+from PACKET import PACKET
 
 
 
